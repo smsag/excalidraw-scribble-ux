@@ -70,3 +70,7 @@ At most two primary (Black) elements per page. In Nimbus the level is set in the
 
 Post-its carry `customData.nimbus.sticky: true`, so Nimbus renders their text as Markdown and fits the note to it.
 Other Excalidraw apps ignore it and show the raw text.
+
+## License
+
+MIT, see [LICENSE](LICENSE). Excalifont itself is not included; `excalifont-widths.json` holds only its character widths.
