@@ -974,9 +974,9 @@ S = "Annotations and post-its"
 for (bg, t), a in zip([("#ffec99", "Idea"), ("#fcc2d7", "Question"), ("#a5d8ff", "To do"),
                        ("#b2f2bb", "Done"), ("#ffd8a8", "Bug"), ("#d0bfff", "Note")], [-3, 2, -1.5, 3, -2, 1.5]):
     it = item("Post-it / " + t.lower(), S)
-    # sticky flag: lets Nimbus render the label as Markdown and fit the note to it
+    # Nimbus: draw the label as Markdown, fit the note to it, never below its own height (stickyHeight)
     it.label(it.rect(0, 0, 160, 160, bg=bg, round=False, angle=math.radians(a),
-                     customData={"nimbus": {"sticky": True}}), t, 20)
+                     customData={"nimbus": {"sticky": True, "stickyHeight": 160}}), t, 20)
 
 it = item("Numbered marker", S)
 it.label(it.ell(0, 0, 32, 32, bg=RED_BG, stroke=RED), "1", 16, RED)

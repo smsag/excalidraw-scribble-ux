@@ -74,7 +74,8 @@ hue and fill at `customData.nimbus.niehausBase`; elsewhere apply the ladder by h
 
 ## Nimbus-specific data
 
-Post-its carry `customData.nimbus.sticky: true`, so Nimbus renders their text as Markdown and fits the note to it.
+Post-its carry `customData.nimbus` `{"sticky": true, "stickyHeight": 160}`: Nimbus renders their text as Markdown and
+fits the note to it, never below `stickyHeight` (a hand resize in Nimbus sets a new one).
 Other Excalidraw apps ignore it and show the raw text.
 
 ## License
