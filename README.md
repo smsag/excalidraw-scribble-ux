@@ -56,15 +56,21 @@ Buttons and fields inside patterns are nested groups: double-click into a patter
 After Sandra Niehaus (2010): each element gets an attention level. Unlike Niehaus' grey blocks, an element keeps its
 colour and only gains weight, using the five shades (0–4) of its Excalidraw palette hue.
 
-| Level | Role | Area share | Stroke | Width | Background | Text |
-|---|---|---|---|---|---|---|
-| Light | must-have | ~60 % | shade 2 | 1 | none | shade 3 |
-| Medium | tertiary | ~30 % | shade 4 | 1 | shade 1, hachure | shade 4 |
-| Dark | secondary | ~8 % | shade 4 | 2 | shade 2, solid | #1e1e1e |
-| Black | primary | ~2 % | shade 4 | 4 | shade 4, solid | #ffffff |
+| Level | Role | Area share | Stroke | Width | Filled shape | Unfilled shape | Text on a shape | Free text |
+|---|---|---|---|---|---|---|---|---|
+| Light | must-have | ~60 % | shade 2 | 1 | no fill | no fill | shade 3 | shade 3, 16 (S) |
+| Medium | tertiary | ~30 % | shade 4 | 1 | shade 1, hachure | no fill | shade 4 | shade 4, 20 (M) |
+| Dark | secondary | ~8 % | shade 4 | 2 | shade 2, solid | no fill | #1e1e1e | #1e1e1e, 28 (L) |
+| Black | primary | ~2 % | shade 4 | 4 | shade 4, solid | shade 4, solid | #ffffff | #1e1e1e, 36 (XL) |
 
-At most two primary (Black) elements per page. In Nimbus the level is set in the style panel and stored at
-`customData.nimbus.niehaus`; elsewhere apply the ladder by hand.
+- **Medium is the normal look:** a shape without a fill stays open until Black.
+- **Ink stays ink:** black (#1e1e1e) and colours outside the palette use grey's shades, but with #1e1e1e as shade 4, so
+  an ink drawing looks unchanged at Medium.
+- **Free text** (text on no shape) shows its weight through font size, since its colour alone barely changes.
+- **At most two primary (Black) elements per page.**
+
+In Nimbus the level is set in the style panel and stored at `customData.nimbus.niehaus`, with the element's original
+hue and fill at `customData.nimbus.niehausBase`; elsewhere apply the ladder by hand.
 
 ## Nimbus-specific data
 
